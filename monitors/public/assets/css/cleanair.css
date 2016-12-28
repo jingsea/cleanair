@@ -1,0 +1,458 @@
+﻿/*!
+ * CleanAir Spaces
+ */
+/*! cleanair.css v3.0.1 | MIT License | cleanair */
+
+
+html {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-scrollbar {display:none;}
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+body {
+    margin:0;     /* This is used to reset any browser-default margins */
+    height:100vh; /* This is needed to overcome a Chrome bug. */
+    width:100vw;  /* As above. */
+    /*min-height:1000px; */
+}
+
+#body {
+    float:left;
+    height:100vh;
+    width:100vw;
+}
+
+#header {
+    background:#fff;
+    float:left;
+    height:60px;
+    width:100vw;
+}
+#footer {
+    position: fixed;
+    bottom: 0;
+    background:#fff;
+    height:60px;
+    width:100vw;
+    text-align: center;
+    vertical-align: middle;
+}
+#left {
+    float:left;
+    height:calc( 100vh - 60px);
+    width: calc( 100% - 400px);
+    overflow: hidden;
+}
+
+#buttonbar {
+	position: relative;
+	top: 0px;
+	left: 0px;
+    background: rgba(0, 0, 0, 0.6);
+    height:40px;
+    max-height:40px;
+    width:100%;
+	overflow-y: visible;
+	padding: 5px;
+}
+
+#right {
+    background: rgba(0, 0, 0, 0.6);
+    float:right;
+    height:calc( 100vh - 60px);
+    width:400px;
+	overflow: hidden;
+	-webkit-scrollbar {display:none;}
+
+}
+
+#center {
+    background: rgba(255, 255, 255,0.7);
+    height:calc( 100vh - 200px);
+    width:calc( 100% - 200px);
+	position: relative;
+	top:40px;
+	left:100px;
+	overflow: scroll;
+	-webkit-scrollbar {display:none;}
+
+}
+
+#centertitle {
+    background: rgba(0, 0, 0, 0.6);
+    height: 50px;
+    width: 100%;
+	position: relative;
+	top:0px;
+	left:0px;
+	-webkit-scrollbar {display:none;}
+
+    line-height: normal;
+    font-size: 28px;
+    font-weight: 400;
+    color: #dedede;
+	text-align: center;
+}
+
+#cust_logo_locs {
+	background: rgba(255, 255, 255,1);
+	width: 100%;
+	position: relative;
+	top:0px;
+	left:0px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+#location_title {
+    background: rgba(0, 0, 0, 0.8);
+    height: 50px;
+    width: 100%;
+	position: relative;
+	top:0px;
+	left:0px;
+	-webkit-scrollbar {display:none;}
+
+    line-height: normal;
+    font-size: 28px;
+    font-weight: 400;
+    color: #dedede;
+	text-align: center;
+}
+location_title.clickable { color: inherit; }
+location_title.clickable:hover { text-decoration:none; }
+
+
+#location_cont {
+	width: 100%;
+	position: relative;
+	top:0px;
+	left:0px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#location_desc {
+	width: 100%;
+	height: 250px;
+	position: relative;
+	top:0px;
+	left:0px;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+#cust_logo {
+	background: rgba(255, 255, 255,1);
+	width: 400px;
+	position: relative;
+	top:0px;
+	left:0px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+#readings_contents {
+	width: 390px;
+	height: 100%;
+	position: relative;
+	top:5px;
+	left:0px;
+    margin: auto;
+    padding: 0px 15px 0px 15px;
+	overflow-y: hidden;
+	-webkit-scrollbar {display:none;};
+}
+
+#readings_container{
+	position: relative;
+	top:0px;
+	left:0px;
+	height: calc( 100vh - 90px - 80px);
+	overflow: scroll;
+	-webkit-scrollbar {display:none;};
+}
+
+
+h1{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 12em;
+    font-weight: 300;
+    line-height: 0.8;
+	color: #ffffff;
+}
+
+#chart_panel{
+	position: relative;
+	top: 10px;
+	float: middle;
+	padding:20px; 
+	background-color: rgba(125, 255, 255, 0);
+}
+
+#chart_panel_close {
+    z-index: 1000;
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    right: 20px;
+}
+
+.clickable
+{
+    cursor: pointer;
+}
+
+.clickable .glyphicon
+{
+    background: rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px
+}
+
+.panel-heading span
+{
+    margin-top: -23px;
+    font-size: 15px;
+    margin-right: -9px;
+}
+a.clickable { color: inherit; }
+a.clickable:hover { text-decoration:none; }
+
+
+.readings_box {
+    width: 100%;
+    border-bottom: 1px #4B8194 solid;
+    padding: 8px 0
+}
+
+.readings_loc {
+    float: left;
+    padding: 2px 0
+}
+.readings_loctext {
+    line-height: normal;
+    font-size: 16px;
+    font-weight: 400;
+    color: #A2C9D7;
+    text-transform: uppercase
+}
+
+.readings_tvoc {
+    line-height: 1.2;
+    font-size: 14px;
+    font-weight: 400;
+    color: #A2C9D7;
+    text-transform: uppercase
+}
+.readings_co2 {
+    line-height: 1.2;
+    font-size: 14px;
+    font-weight: 400;
+    color: #A2C9D7;
+    text-transform: uppercase
+}
+.hr_half {
+    float: left;
+    margin-top: 8px;
+    height: 1px;
+    width: 50%;
+    background-color: #4B8194
+}
+
+.hr_center {
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 1px;
+    background-color: #4B8194
+}
+
+.reading_type {
+    line-height: normal;
+    font-size: 16px;
+    font-weight: 400;
+    color: #A2C9D7;
+    text-transform: uppercase
+}
+
+.readings_measure {
+    display: inline-block;
+    margin-left: 3px;
+    width: 30px;
+    text-align: left;
+    line-height: normal;
+    font-size: 10px;
+    color: #64A6BD
+}
+
+.indoor_readings_time {
+    text-align: right;
+    padding-top: 6px;
+    padding-right: 10px;
+    font-size: 11px;
+    color: #A2C9D7
+}
+
+.outdoor_readings_time {
+    text-align: right;
+    padding-top: 6px;
+    padding-right: 10px;
+    font-size: 11px;
+    color: #A2C9D7
+}
+
+.readings_reading,
+ {
+    display: block;
+    text-align: center;
+    line-height: 130px;
+    font-size: 130px;
+    letter-spacing: -6px;
+    color: #ffffff;
+}
+
+#chartdiv {
+  width: 350px;
+  height: 350px;
+  margin: auto;
+}
+
+
+#indoor_circle {
+  width: 300px;
+  height: 250px;
+  position: relative;
+  text-align: center;
+}
+
+#indoor_circle .param {
+  font: 32px/1 sans-serif;
+  color: #eee;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+}
+
+#indoor_circle .value {
+  font: 120px/1 sans-serif;
+  color: #1e4;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+}
+
+#indoor_circle .measure {
+  font: 14px/1 sans-serif;
+  color: #aaa;
+  position: absolute;
+  top: 190px;
+  left: 0;
+  right: 0;
+}
+
+#outdoor_circle {
+  width: 300px;
+  height: 250px;
+  position: relative;
+  text-align: center;
+}
+
+#outdoor_circle .param {
+  font: 32px/1 sans-serif;
+  color: #eee;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+}
+
+#outdoor_circle .value {
+  font: 120px/1 sans-serif;
+  color: #1e4;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+}
+
+#outdoor_circle .measure {
+  font: 14px/1 sans-serif;
+  color: #aaa;
+  position: absolute;
+  top: 190px;
+  left: 0;
+  right: 0;
+}
+
+#indoor_other
+{
+}
+
+#indoor_other .indoor_left {
+    float: left;
+    width: 120px;
+    height: 60px;
+  color: #eee;
+}
+#indoor_other .indoor_right {
+    float: right;
+    width: 120px;
+    height: 60px;
+  color: #eee;
+}
+#indoor_other .indoor_middle {
+    padding: 0px 120px 0px 120px;
+    margin: 0px;
+    height: 60px;
+  color: #eee;
+}
+
+.indoor_hr_left {
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 5px;
+    background-color: #4B8194
+}
+
+.indoor_hr_center {
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 5px;
+    background-color: #4B8194
+}
+
+.indoor_hr_right {
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 5px;
+    background-color: #4B8194
+}
+
