@@ -31,11 +31,4 @@ class Compaines extends Model
 
         return $locationDataBaseCompany;
     }
-    //get all company name_en ,secure
-    public static function companyAll()
-    {
-        $companyAll=DB::table('companies')
-            ->select('company_id','name_en','secure')->get();
-        return $companyAll;
-    }
 }

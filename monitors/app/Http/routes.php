@@ -29,7 +29,6 @@ Route::group(['middleware' => 'web'], function()
 
     Route::get('/Refresh','RefreshController@refresh');
     Route::get('/','IndexController@index');
-    Route::get('/login','LoginController@login');
 
 
 
